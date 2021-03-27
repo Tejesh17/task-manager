@@ -1,8 +1,10 @@
 const express = require('express')
+const bcrypt = require('bcryptjs')
 require('./db/mongoose')
 
 const User = require('./models/user')
 const Task = require('./models/task')
+
 
 const app = express();
 
@@ -19,3 +21,4 @@ app.use(taskRoute)
 app.listen(port, ()=>{
     console.log("server is up on port "+ port)
 })
+
